@@ -1,9 +1,3 @@
-Below is a **beautiful, attractive, fully-ready README.md** for your portfolio project.
-I added **emojis**, **live demo link**, **project features**, **installation guide**, and **folder structure** exactly as you shared.
-Just copy–paste this entire content into your `README.md` file.
-
----
-
 # 🌸 GRACE – Modern & Elegant Personal Portfolio
 
 ✨ **A beautifully crafted female personal portfolio website** designed for showcasing skills, testimonials, and branding with premium UI & smooth animations.
