@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ramaraja&display=swap");
+
+.plan {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000000 0%, #0a0e1a 50%, #000000 100%);
+  padding: 100px 60px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(
+      circle,
+      rgba(59, 130, 246, 0.08) 0%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    filter: blur(100px);
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    .mainTitle {
+      font-family: "Ramaraja", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 120px;
+      line-height: 129%;
+      letter-spacing: -2%;
+      text-align: center;
+
+      color: #60a5fa;
+      margin: 0 0 40px 0;
+      text-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    .mainDescription {
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto 80px;
+    }
+
+    .plansGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+
+      .planCard {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.03) 0%,
+          rgba(255, 255, 255, 0.01) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 24px;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            145deg,
+            rgba(96, 165, 250, 0.05) 0%,
+            transparent 100%
+          );
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        &:hover {
+          transform: translateY(-8px);
+          border-color: rgba(96, 165, 250, 0.3);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+          &::before {
+            opacity: 1;
+          }
+
+          .cardImage {
+            background: linear-gradient(145deg, #4a5568 0%, #2d3748 100%);
+            border-color: rgba(96, 165, 250, 0.3);
+
+            .planNumber {
+              transform: scale(1.05);
+              color: #60a5fa;
+            }
+          }
+        }
+
+        .cardImage {
+          width: 100%;
+          height: 200px;
+          background: linear-gradient(145deg, #3a4556 0%, #2a3442 100%);
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 28px;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.4s ease;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+              45deg,
+              transparent 30%,
+              rgba(96, 165, 250, 0.1) 50%,
+              transparent 70%
+            );
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+          }
+
+          .planNumber {
+            font-family: "Poppins", sans-serif;
+            font-size: 120px;
+            font-weight: 700;
+            color: #60a5fa;
+            opacity: 0.5;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease;
+          }
+        }
+
+        .cardContent {
+          .cardTitle {
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.4;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.3px;
+          }
+
+          .cardDescription {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive Design - All nested within .plan
+  @media (max-width: 1200px) {
+    padding: 80px 40px;
+
+    .container {
+      .mainTitle {
+        font-size: 60px;
+        letter-spacing: 6px;
+      }
+
+      .mainDescription {
+        font-size: 16px;
+        margin-bottom: 60px;
+      }
+
+      .plansGrid {
+        gap: 30px;
+
+        .planCard {
+          .cardImage {
+            height: 180px;
+
+            .planNumber {
+              font-size: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 60px 30px;
+
+    .container {
+      .mainTitle {
+        font-size: 48px;
+        letter-spacing: 4px;
+      }
+
+      .plansGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+
+    .container {
+      .mainTitle {
+        font-size: 40px;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+      }
+
+      .mainDescription {
+        font-size: 15px;
+        margin-bottom: 50px;
+      }
+
+      .plansGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+
+        .planCard {
+          .cardImage {
+            height: 160px;
+
+            .planNumber {
+              font-size: 90px;
+            }
+          }
+
+          .cardContent {
+            .cardTitle {
+              font-size: 18px;
+            }
+
+            .cardDescription {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 16px;
+
+    .container {
+      .mainTitle {
+        font-size: 32px;
+        letter-spacing: 2px;
+      }
+
+      .mainDescription {
+        font-size: 14px;
+      }
+
+      .plansGrid {
+        .planCard {
+          padding: 20px;
+
+          .cardImage {
+            height: 140px;
+
+            .planNumber {
+              font-size: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
