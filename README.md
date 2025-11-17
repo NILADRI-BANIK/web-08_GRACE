@@ -4,6 +4,8 @@
 
 🚀 **Live Demo:**
 👉 [https://frolicking-valkyrie-4325dc.netlify.app/](https://frolicking-valkyrie-4325dc.netlify.app/)
+💞 **Figma design:**
+👉 https://www.figma.com/design/C2yT6Dfq0KhaYoT1aNqfk6/Untitled?node-id=1-2
 
 ---
 
